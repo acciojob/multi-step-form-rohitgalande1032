@@ -31,7 +31,7 @@ const Step = ({ step, form, handleChange, nextStep, prevStep, handleSubmit }) =>
         {/* Step-2 Car Detail */}
 
         {step === 2 && (
-            <div id='step2'>
+            <div id="step2">
             <label for="model">Model</label><br/>
             <input 
             type='text'
@@ -55,7 +55,7 @@ const Step = ({ step, form, handleChange, nextStep, prevStep, handleSubmit }) =>
 
         {/* Step 3: Payment Details */}
       {step === 3 && (
-        <div id='step3'>
+        <div id="step3">
         <label for="car_info">Car Info:</label><br/>
           <input
             id="card_info"
