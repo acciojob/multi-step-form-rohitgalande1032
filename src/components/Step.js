@@ -2,12 +2,12 @@ import React from 'react'
 
 const Step = ({ step, form, handleChange, nextStep, prevStep, handleSubmit }) => {
   return (
-    <div>
+    <div id={`step${step}`}>
         <h2>Step {step}</h2>
 
         {/* Step 1 - User detail */}
         {step === 1 && (
-            <div id="step1">
+            <div>
                 <label for="first_name">First Name:</label><br/>
                 <input 
                 type="text"
@@ -31,7 +31,7 @@ const Step = ({ step, form, handleChange, nextStep, prevStep, handleSubmit }) =>
         {/* Step-2 Car Detail */}
 
         {step === 2 && (
-            <div id="step2">
+            <div>
             <label for="model">Model</label><br/>
             <input 
             type='text'
@@ -55,7 +55,7 @@ const Step = ({ step, form, handleChange, nextStep, prevStep, handleSubmit }) =>
 
         {/* Step 3: Payment Details */}
       {step === 3 && (
-        <div id="step3">
+        <div>
         <label for="car_info">Car Info:</label><br/>
           <input
             id="card_info"
