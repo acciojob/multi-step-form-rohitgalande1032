@@ -7,31 +7,31 @@ const Step = ({ step, form, handleChange, nextStep, prevStep, handleSubmit }) =>
 
         {/* Step 1 - User detail */}
         {step === 1 && (
-            <>
-            <label for="first_name">First Name:</label><br/>
-            <input 
-            type="text"
-            id="first_name"
-            name="first_name"
-            value={form.first_name}
-            onChange={handleChange}
-            /> <br />
+            <div id="#step1">
+                <label for="first_name">First Name:</label><br/>
+                <input 
+                type="text"
+                id="first_name"
+                name="first_name"
+                value={form.first_name}
+                onChange={handleChange}
+                /> <br />
 
-            <label for="last_name">Last Name:</label><br/>
-            <input 
-            type="text"
-            id="last_name"
-            name="last_name"
-            value={form.last_name}
-            onChange={handleChange}
-            /><br/>
-            </>
+                <label for="last_name">Last Name:</label><br/>
+                <input 
+                type="text"
+                id="last_name"
+                name="last_name"
+                value={form.last_name}
+                onChange={handleChange}
+                /><br/>
+            </div>
         )}
 
         {/* Step-2 Car Detail */}
 
         {step === 2 && (
-            <>
+            <div id='#step2'>
             <label for="model">Model</label><br/>
             <input 
             type='text'
@@ -50,12 +50,12 @@ const Step = ({ step, form, handleChange, nextStep, prevStep, handleSubmit }) =>
             onChange={handleChange}
             /> <br />
             
-            </>
+            </div>
         )}
 
         {/* Step 3: Payment Details */}
       {step === 3 && (
-        <>
+        <div id='#step3'>
         <label for="car_info">Car Info:</label><br/>
           <input
             id="card_info"
@@ -74,7 +74,7 @@ const Step = ({ step, form, handleChange, nextStep, prevStep, handleSubmit }) =>
             onChange={handleChange}
             name="expiry_date"
           />
-        </>
+        </div>
       )}
 
 <div>
