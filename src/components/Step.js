@@ -3,11 +3,9 @@ import React from 'react'
 const Step = ({ step, form, handleChange, nextStep, prevStep, handleSubmit }) => {
   return (
     <div id={`step${step}`}>
-        <h2>Step {step}</h2>
-
         {/* Step 1 - User detail */}
         {step === 1 && (
-            <div>
+            <>
                 <label for="first_name">First Name:</label><br/>
                 <input 
                 type="text"
@@ -25,13 +23,13 @@ const Step = ({ step, form, handleChange, nextStep, prevStep, handleSubmit }) =>
                 value={form.last_name}
                 onChange={handleChange}
                 /><br/>
-            </div>
+            </>
         )}
 
         {/* Step-2 Car Detail */}
 
         {step === 2 && (
-            <div>
+            <>
             <label for="model">Model</label><br/>
             <input 
             type='text'
@@ -50,17 +48,16 @@ const Step = ({ step, form, handleChange, nextStep, prevStep, handleSubmit }) =>
             onChange={handleChange}
             /> <br />
             
-            </div>
+            </>
         )}
 
         {/* Step 3: Payment Details */}
       {step === 3 && (
-        <div>
+        <>
         <label for="car_info">Car Info:</label><br/>
           <input
             id="card_info"
             type="text"
-            placeholder="Card Information"
             value={form.card_info}
             onChange={handleChange}
             name="card_info"
@@ -69,19 +66,19 @@ const Step = ({ step, form, handleChange, nextStep, prevStep, handleSubmit }) =>
           <input
             id="expiry_date"
             type="text"
-            placeholder="Expiry Date (MM/YY)"
+            placeholder="(MM/YY)"
             value={form.expiry_date}
             onChange={handleChange}
             name="expiry_date"
           />
-        </div>
+        </>
       )}
 
-<div>
-        {step > 1 && <button onClick={prevStep}>Previous</button>}
-        {step < 3 && <button onClick={nextStep}>Next</button>}
-        {step === 3 && <button onClick={handleSubmit}>Submit</button>}
-      </div>
+        <>
+            {step > 1 && <button onClick={prevStep}>Previous</button>}
+            {step < 3 && <button onClick={nextStep}>Next</button>}
+            {step === 3 && <button onClick={handleSubmit}>Submit</button>}
+        </>
     </div>
   )
 }
